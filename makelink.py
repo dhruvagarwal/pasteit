@@ -8,7 +8,6 @@ br.select_form(nr=0)
 path=raw_input("enter file path - ")
 s=open(path,"r").read()
 br.form["poster"]=os.popen("whoami").read()
-#br.form["syntax"]="text"
 br.form["content"]=s
 br.submit()
 
