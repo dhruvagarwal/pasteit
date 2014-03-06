@@ -21,6 +21,8 @@ Usage:
     $ python makelink.py
 
     enter file path - (complete file path along with extension)
+    link is http://pastebin.ubuntu.com/(uniquecode)/
+    It's copied to the clipboard !
     
 <dl>
   <dt>enter file path - </dt>
