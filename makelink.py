@@ -8,6 +8,10 @@ br.open('http://pastebin.ubuntu.com')
 br.select_form(nr=0)
 path=raw_input("enter file path - ")
 s=open(path,"r").read()
+extension = os.path.splitext(path)[1][1:].strip() 
+lang = { "c":"c","cpp" : "cpp","java" :"java","php"  :"php","py":"python","css"  :"css","sh" : "bash","cs"  :"csharp","html" :"html","js" :"js","m" :"matlab","go" : "go","pl" : "perl","rb" :"ruby"}
+if extension in lang:
+	br.form["syntax"]=[lang[extension],]
 br.form["poster"]=os.popen("whoami").read()
 br.form["content"]=s
 br.submit()
