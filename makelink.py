@@ -1,4 +1,5 @@
 import os
+import xerox
 import mechanize
 
 br=mechanize.Browser()
@@ -12,5 +13,7 @@ br.form["content"]=s
 br.submit()
 
 l=[x for x in br.links()]
-print "http://pastebin.ubuntu.com"+l[0].url[:len(l[0].url)-6]
-
+link="http://pastebin.ubuntu.com"+l[0].url[:len(l[0].url)-6]
+print "link is " + link
+xerox.copy(link)
+print "It's copied to the clipboard !"
