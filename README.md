@@ -21,14 +21,10 @@ Usage:
 **pastebin_linkmaker** lets you paste your text to [pastebin](http://pastebin.ubuntu.com/) directly through the terminal. Change the directory to the directory where your code is stored. Then simply run
 
     $ python makelink.py (filename alongwith path)
-
-    *   <b>if you have switched to other interface , you may see </b>
-    
-        enter file path - (complete file path along with extension)
-    
+        
         link is http://pastebin.ubuntu.com/(uniquecode)/
         It's copied to the clipboard !
-    
+
 <dl>
   <dt>enter file path - </dt>
   <dd>If you are located in the same folder as your code is then just type the name of the file along with extension. eg Main.java</dd>
