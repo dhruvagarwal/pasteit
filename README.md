@@ -6,12 +6,14 @@ Dependencies:
 *  Python 2.7
 *  mechanize
 *  xerox
+*  xclip
 
 These dependencies can be installed via `pip` or `apt-get`
 
         $ pip install mechanize
         $ apt-get install python-mechanize
         $ pip install xerox
+        $ apt-get install xclip
         
 Usage:
 ----------
@@ -21,12 +23,16 @@ Usage:
     $ python makelink.py
 
     enter file path - (complete file path along with extension)
+    link is http://pastebin.ubuntu.com/(uniquecode)/
+    It's copied to the clipboard !
     
 <dl>
   <dt>enter file path - </dt>
   <dd>If you are located in the same folder as your code is then just type the name of the file along with extension. eg Main.java</dd>
   <dd>If you are located in say Documents folder then type /home/username/Documents/Main.java</dt>
 </dl>
+
+<b>The link is automatically copied to your clipboard.So just run this script and you are free to paste the link anywhere right away .</b>
 
 Developed By:
 --------------
