@@ -1,4 +1,4 @@
-import os
+import os,sys
 import xerox
 import mechanize
 
@@ -6,7 +6,12 @@ br=mechanize.Browser()
 br.set_handle_robots(False)
 br.open('http://pastebin.ubuntu.com')
 br.select_form(nr=0)
-path=raw_input("enter file path - ")
+path=sys.argv[1:][0]
+
+# comment the above line if you do not want to use command line argument system
+# and uncomment the next line
+# path=raw_input('Enter File name with path - ')
+
 s=open(path,"r").read()
 br.form["poster"]=os.popen("whoami").read()
 br.form["content"]=s
