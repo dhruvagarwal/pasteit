@@ -21,9 +21,8 @@ Usage:
 **pastebin_linkmaker** lets you paste your text to [pastebin](http://pastebin.ubuntu.com/) directly through the terminal. Change the directory to the directory where your code is stored. Then simply run
 
     $ python makelink.py (filename alongwith path)
-        
-        link is http://pastebin.ubuntu.com/(uniquecode)/
-        It's copied to the clipboard !
+    link is http://pastebin.ubuntu.com/(uniquecode)/
+    It's copied to the clipboard !
 
 <dl>
   <dt>enter file path - </dt>
