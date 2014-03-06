@@ -6,12 +6,14 @@ Dependencies:
 *  Python 2.7
 *  mechanize
 *  xerox
+*  xclip
 
 These dependencies can be installed via `pip` or `apt-get`
 
         $ pip install mechanize
         $ apt-get install python-mechanize
         $ pip install xerox
+        $ apt-get install xclip
         
 Usage:
 ----------
