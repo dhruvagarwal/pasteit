@@ -28,6 +28,8 @@ Usage:
   <dd>If you are located in say Documents folder then type /home/username/Documents/Main.java</dt>
 </dl>
 
+The link is automatically copied to your clipboard.So just run this script and you are free to paste the link anywhere right away .
+
 Developed By:
 --------------
 *  Dhruv Agarwal
