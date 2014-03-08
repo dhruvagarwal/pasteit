@@ -1,19 +1,34 @@
 import os,sys
 import xerox
 import mechanize
-
+import logging
 br=mechanize.Browser()
 br.set_handle_robots(False)
 br.open('http://pastebin.ubuntu.com')
 br.select_form(nr=0)
-path=sys.argv[1:][0]
+global path
+global error_flg
+logging.addLevelName( logging.ERROR, "\033[1;41m%s\033[1;m" % logging.getLevelName(logging.ERROR))
+logging.getLogger().name = ''
+def check(file_path):
 
-# comment the above line if you do not want to use command line argument system
-# and uncomment the next line
-# path=raw_input('Enter File name with path - ')
+	if os.path.exists(file_path):
+		return
+	if file_path is not '':	
+		logging.error("Enter valid path,relative to current directory.") 
+		print "Make sure you provide correct file extension"
+		print "e.g - /home/user/xyz.py or file_name.c"
+		global path
+	path=raw_input('Enter File name with path - ').strip()
+	check(path)
+
+try:
+	path=sys.argv[1:][0]
+except:
+	check('')		
 
 s=open(path,"r").read()
-extension = os.path.splitext(path)[1][1:].strip() 
+extension = os.path.splitext(path)[1][1:]
 lang = { "c":"c","cpp" : "cpp","java" :"java","php"  :"php","py":"python","css"  :"css","sh" : "bash","cs"  :"csharp","html" :"html","js" :"js","m" :"matlab","go" : "go","pl" : "perl","rb" :"ruby"}
 if extension in lang:
 	br.form["syntax"]=[lang[extension],]
