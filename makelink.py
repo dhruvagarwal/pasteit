@@ -7,12 +7,10 @@ br.set_handle_robots(False)
 br.open('http://pastebin.ubuntu.com')
 br.select_form(nr=0)
 global path
-global error_flg
-logging.addLevelName( logging.ERROR, "\033[1;41m%s\033[1;m" % logging.getLevelName(logging.ERROR))
-logging.getLogger().name = ''
-def check(file_path):
-
-	if os.path.exists(file_path):
+logging.addLevelName( logging.ERROR, "\033[1;41m%s\033[1;m" % logging.getLevelName(logging.ERROR)) # make it colorful
+logging.getLogger().name = ''       # remove root logger's name
+def check(file_path): 
+    if os.path.exists(file_path):
 		return
 	if file_path is not '':	
 		logging.error("Enter valid path,relative to current directory.") 
@@ -22,8 +20,8 @@ def check(file_path):
 	path=raw_input('Enter File name with path - ').strip()
 	check(path)
 
-try:
-	path=sys.argv[1:][0]
+try:                            # user can forgrt to give command line args
+	path=sys.argv[1:][0].strip()        # no need to change code for user
 except:
 	check('')		
 
