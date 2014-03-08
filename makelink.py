@@ -9,11 +9,11 @@ br.select_form(nr=0)
 global path
 logging.addLevelName( logging.ERROR, "\033[1;41m%s\033[1;m" % logging.getLevelName(logging.ERROR)) # make it colorful
 logging.getLogger().name = ''       # remove root logger's name
-def check(file_path): 
-    if os.path.exists(file_path):
+def check(file_path):
+	if os.path.exists(file_path):
 		return
-	if file_path is not '':	
-		logging.error("Enter valid path,relative to current directory.") 
+	if file_path is not '':
+		logging.error("Enter valid path,relative to current directory.")
 		print "Make sure you provide correct file extension"
 		print "e.g - /home/user/xyz.py or file_name.c"
 		global path
