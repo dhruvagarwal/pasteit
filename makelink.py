@@ -20,10 +20,10 @@ def check(file_path):
 	path=raw_input('Enter File name with path - ').strip()
 	check(path)
 
-try:                            # user can forgrt to give command line args
-	path=sys.argv[1:][0].strip()        # no need to change code for user
+try:
+	path=sys.argv[1:][0].strip()	# to retrieve path from command line arguments
 except:
-	check('')		
+	check('')						# if a user forgets to enter path in command line
 
 s=open(path,"r").read()
 extension = os.path.splitext(path)[1][1:]
