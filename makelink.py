@@ -22,6 +22,7 @@ def check(file_path):
 
 try:
 	path=sys.argv[1:][0].strip()	# to retrieve path from command line arguments
+	check(path)
 except:
 	check('')						# if a user forgets to enter path in command line
 
