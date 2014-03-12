@@ -17,8 +17,11 @@ def check(file_path):
 		print "Make sure you provide correct file extension"
 		print "e.g - /home/user/xyz.py or file_name.c"
 		global path
-	path=raw_input('Enter File name with path - ').strip()
-	check(path)
+	try:
+		path=raw_input('Enter File name with path - ').strip()
+		check(path)
+	except:
+		sys.exit()
 
 try:
 	path=sys.argv[1:][0].strip()	# to retrieve path from command line arguments
