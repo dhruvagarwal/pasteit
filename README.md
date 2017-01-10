@@ -45,8 +45,6 @@ link is http://paste.ubuntu.com/01010100/
 It's copied to the clipboard !
 ```
 
-<b>The link is automatically copied to your clipboard.So just run this script and you are free to paste the link anywhere right away .</b>
-
 Developed By:
 --------------
 *  Dhruv Agarwal
